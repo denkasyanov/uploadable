@@ -11,6 +11,6 @@ services:
             - .:/app
         ports:
             - "8000:8000"
-        entrypoint: docker-entrypoint.sh
+        entrypoint: ./docker-entrypoint.sh
         depends_on:
             - db
