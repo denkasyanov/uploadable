@@ -1,0 +1,8 @@
+<h1>Pictures</h1>
+<ul>
+{% for picture in object_list %}
+    <li>{{ picture.title }} - {{ picture.url }}</li>
+{% empty %}
+    <li>No pictures yet.</li>
+{% endfor %}
+</ul>
