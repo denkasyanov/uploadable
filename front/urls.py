@@ -4,6 +4,9 @@ from . import views
 
 
 urlpatterns = [
-    path('add-picture/', views.AddPictureView.as_view(), name='add'),
-    path('', views.AllPicturesView.as_view(), name='list')
+    path('', views.PictureListView.as_view(), name='list'),
+    path('add-picture/', views.PictureCreateView.as_view(), name='create'),
+    # path('upload/', views.simple_upload, name='upload'),
+    # path('model-form-upload/', views.model_form_upload,
+    #       name='model-form-upload'),
 ]
