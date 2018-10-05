@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1>Pictures</h1>
+<a href="{% url 'pictures:create' %}">Add a picture</a>
+<ul>
+{% for picture in object_list %}
+    <li><h2>{{ picture.title }}</h2>
+        <a href="{{ picture.image.url }}"><img style="max-width: 400px;" src="{{ picture.image.url }}" alt="{{ picture.title }}"></li></a>
+{% empty %}
+    <li>No pictures yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}
